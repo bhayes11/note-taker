@@ -4,7 +4,7 @@
 // These data sources hold arrays of information on table-data, waitinglist, etc.
 // ===============================================================================
 
-var tableData = require("../db.json");
+const tableData = require("../db.json");
 
 
 // ===============================================================================
@@ -35,8 +35,7 @@ module.exports = function(app) {
   app.post("/api/notes", function(req, res) {
     console.log('id', req.params);
     console.log('body', req.body);
-    // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-    // It will do this by sending out the value "true" have a table
+    // Remove tabledata
     // req.body is available since we're using the body parsing middleware
     if (tableData.length < 5) {
       tableData.push(req.body);
