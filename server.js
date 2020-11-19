@@ -22,6 +22,15 @@ app.use(express.json());
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
+//allows server to connect to js and css files
+// app.get("assets/js/index.js", (req, res) => {
+//   res.sendFile(path.join(__dirname, "/assets/js/index.js"));
+// });
+
+// app.get("/assets/css/styles.css", (req,res) => {
+//     res.sendFile(path.join(__dirname, "/assets/css/styles.css"));
+// });
+
 // =============================================================================
 // LISTENER
 // The below code effectively "starts" our server

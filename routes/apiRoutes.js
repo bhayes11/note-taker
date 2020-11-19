@@ -37,14 +37,14 @@ module.exports = function(app) {
     console.log('body', req.body);
     // Remove tabledata
     // req.body is available since we're using the body parsing middleware
-    if (tableData.length < 5) {
+    // if (tableData.length < 5) {
       tableData.push(req.body);
-      res.json(true);
-    }
-    else {
-      waitListData.push(req.body);
-      res.json(false);
-    }
+    //   res.json(true);
+    // }
+    // else {
+    //   waitListData.push(req.body);
+    //   res.json(false);
+    // }
   });
 
   // ---------------------------------------------------------------------------
@@ -56,8 +56,8 @@ module.exports = function(app) {
     console.log('id', req.params);
     console.log('body', req.body);
     // Empty out the arrays of data
-    tableData.length = 0;
-    waitListData.length = 0;
+    // tableData.length = 0;
+    // waitListData.length = 0;
     res.json({ ok: true });
   });
 };
